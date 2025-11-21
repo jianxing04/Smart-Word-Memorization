@@ -47,7 +47,7 @@ class _GetchUnix:
 
 def load_wordbook(book_id):
     """加载单词本文件"""
-    filename = f"wordbook{book_id}.txt"
+    filename = f"CET6-{book_id}.txt"
     if not os.path.exists(filename):
         print(f"\n[错误] 找不到文件: {filename}")
         print("请确保在同级目录下创建了该文件，每行一个单词。")
@@ -119,7 +119,7 @@ def main():
     print("提示：输入时按 <Tab> 键可自动补全下一个字母。\n")
     
     # 需求1: 选择单词本
-    book_id = input("请输入单词本编号 (例如输入2代表 wordbook2.txt): ").strip()
+    book_id = input("请输入单词本编号 (例如输入2代表 CET6-2.txt): ").strip()
     words = load_wordbook(book_id)
     
     if not words:
